@@ -1,0 +1,36 @@
+package com.bridgelabz.pp;
+import java.util.*;
+public class arm2 
+{
+public static void main(String args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number to check whether it is armstrong or not");
+	int num=sc.nextInt();
+	int temp=num;
+	int rem=0;
+	int sum=0;
+	int count=0;
+	while(num!=0)
+	{
+		temp=temp/10;
+		count++;
+	}
+temp=num;
+	while(num!=0)
+	{
+	   rem=temp%10;
+	   sum=(int) (sum+Math.pow(rem, count));
+	   temp=temp/10;
+	}
+	if(sum==num)
+	{
+		System.out.println("It is armstrong");
+		
+	}
+	else
+	{
+		System.out.println("It is not a armstrong");
+	}
+}
+}
